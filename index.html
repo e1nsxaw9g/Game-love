@@ -1,0 +1,49 @@
+<!-- Файл: index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Anniversary Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-layer">
+            <div id="objective-tag">Цель: <span id="objective-text">Поговорить с Кристиной</span></div>
+            
+            <div id="dialogue-cloud" class="hidden">
+                <div id="speaker-name"></div>
+                <div id="speech-text"></div>
+                <button id="next-btn">Далее...</button>
+            </div>
+        </div>
+
+        <div id="joystick">
+            <button id="btn-left" class="ctrl-btn">◀</button>
+            <button id="btn-action" class="ctrl-btn">ДЕЙСТВИЕ</button>
+            <button id="btn-right" class="ctrl-btn">▶</button>
+        </div>
+
+        <div id="confirm-modal" class="hidden">
+            <p>Вы уверены, что хотите прыгнуть в яму?</p>
+            <div class="modal-btns">
+                <button id="confirm-yes">Да</button>
+                <button id="confirm-no">Нет</button>
+            </div>
+        </div>
+
+        <div id="final-credits" class="hidden">
+            <div class="credits-wrapper">
+                <p>Создатель: Кристина</p>
+                <p>Вдохновитель: Полина</p>
+                <p>Сын сюжета: Хамелеон</p>
+                <h1 class="glow-text">С ГОДОВЩИНОЙ, ЛЮБИМАЯ!!!!!</h1>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

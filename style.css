@@ -1,0 +1,74 @@
+/* Файл: style.css */
+body, html {
+    margin: 0; padding: 0; overflow: hidden;
+    background: #000; font-family: 'Tahoma', sans-serif;
+    user-select: none; touch-action: none;
+}
+
+#game-container { position: relative; width: 100vw; height: 100vh; }
+canvas { display: block; }
+
+#ui-layer {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+}
+
+#objective-tag {
+    position: absolute; top: 20px; left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px; border-radius: 10px;
+    border: 2px solid #ffb6c1; font-weight: bold;
+}
+
+#dialogue-cloud {
+    position: absolute; bottom: 150px; left: 5%; width: 90%;
+    background: white; border: 4px solid #ff69b4;
+    border-radius: 15px; padding: 15px; pointer-events: auto;
+}
+
+#speaker-name { font-weight: bold; color: #ff69b4; margin-bottom: 5px; }
+
+#next-btn {
+    float: right; background: #ff69b4; color: white;
+    border: none; padding: 5px 15px; border-radius: 5px;
+}
+
+#joystick {
+    position: absolute; bottom: 20px; width: 100%;
+    display: flex; justify-content: center; gap: 20px;
+}
+
+.ctrl-btn {
+    width: 70px; height: 70px; border-radius: 50%;
+    border: 3px solid white; background: rgba(0,0,0,0.3);
+    color: white; font-size: 14px; pointer-events: auto;
+}
+
+#confirm-modal {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background: white; border: 4px solid #ff69b4; padding: 20px;
+    border-radius: 15px; text-align: center; pointer-events: auto;
+}
+
+.modal-btns button { margin: 10px; padding: 10px 20px; cursor: pointer; }
+
+#final-credits {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 182, 193, 0.7); display: flex;
+    justify-content: center; align-items: flex-end; z-index: 100;
+}
+
+.credits-wrapper {
+    text-align: center; color: white; font-size: 24px;
+        animation: scrollUp 15s linear forwards;
+}
+
+.glow-text { text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4; margin-top: 50px; }
+
+@keyframes scrollUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(-150%); }
+}
+
+.hidden { display: none !important; }
+.blur-screen { filter: blur(10px); transition: 5s filter; }
